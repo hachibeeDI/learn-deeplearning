@@ -1,3 +1,4 @@
+import numpy as np
 from matplotlib import pylab as plt
 
 from .src import exp
@@ -15,10 +16,15 @@ class Chap_3_3
         """
         p60-p61
         A weighted addition for the first neuron of first layer.
+
+        W = weight?
+        B = bias
+        Z = zone?
+
+        b + w1x1 + w2x2 => a1
         """
         X = np.array([1.0, 0.5])
         W1 = np.array([[1.0, 0.3, 0.5], [0.2, 0.4, 0.6]])
-        # bias of the first layer
         B1 = np.array([0.1, 0.2, 0.3])
 
         A1 = np.dot(X, W1) + B1
@@ -27,6 +33,8 @@ class Chap_3_3
     def confirm_activate_function_applied():
         """
         p62
+
+        h(a1) => z1
         """
         A1 = self.confirm_exp_3_9()
         Z1 = exp.sigmoid(A1)

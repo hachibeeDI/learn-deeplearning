@@ -11,3 +11,7 @@ def sigmoid(x: np.ndarray) -> np.ndarray:
 
 def relu(x):
     return np.maximum(0, x)
+
+
+def identity(x):
+    return x
